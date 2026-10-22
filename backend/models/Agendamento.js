@@ -15,10 +15,25 @@ const Agendamento = db.define('agendamento', {
         type: DataTypes.TIME,
         allowNull: false
     },
-    tipoServico: {
-        type: DataTypes.STRING(100),
-        allowNull: false
-    }
+    //Adição das Fk faltantes
+    idCliente: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: 'clientes',
+            key: 'codCliente'
+        }
+    },
+    idConsole: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: 'consoles',
+            key: 'codConsole'
+        }
+    },
+
+
 }, {
     timestamps: false,
     tableName: 'agendamentos'

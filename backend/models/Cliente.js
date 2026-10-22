@@ -16,15 +16,15 @@ const Cliente = db.define('cliente', {
         allowNull: false
     },
     senha: {
-        type: DataTypes.STRING(50),
+        type: DataTypes.STRING(100),
         allowNull: false
     },
     cpf: {
-        type: DataTypes.STRING(50),
+        type: DataTypes.STRING(100),
         allowNull: false
     },
-    endereco: {
-        type: DataTypes.STRING(50),
+    telefone: {
+        type: DataTypes.STRING(11),
         allowNull: false
     }
 }, {
